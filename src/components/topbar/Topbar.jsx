@@ -7,7 +7,7 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
       <div className="wrapper">
         <div className="left">
           <a href="#intro" className="logo">
-            <img width="50px" height="50px" src="assets/logo.png" alt="" />
+            <img src="assets/logo.png" alt="" />
           </a>
           <div className="itemContainer">
             <Person className="icon" />
