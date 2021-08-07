@@ -8,10 +8,13 @@ import {
   designPortfolio,
   contentPortfolio,
 } from "../../data";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, Modal } from 'react-bootstrap';
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("featured");
   const [data, setData] = useState([]);
+  
   const list = [
     {
       id: "featured",
@@ -56,6 +59,10 @@ export default function Portfolio() {
         setData(featuredPortfolio);
     }
   }, [selected]);
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  
 
   return (
     <div className="portfolio" id="portfolio">
@@ -74,10 +81,26 @@ export default function Portfolio() {
         {data.map((d) => (
           <div className="item">
             <img
+            onClick={handleShow}
               src={d.img}
-              alt=""
+              alt="d.title"
             />
             <h3>{d.title}</h3>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{d.content}</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
           </div>
         ))}
       </div>
