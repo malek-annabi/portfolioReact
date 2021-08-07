@@ -4,35 +4,23 @@ export default function Testimonials() {
   const data = [
     {
       id: 1,
-      name: "Tom Durden",
-      title: "Senior Developer",
+      name: "Sebastian Bigott",
+      title: "Client",
       img:
         "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      icon: "assets/twitter.png",
       desc:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
+        "Thank you very much , it's really a clean work !",
     },
     {
       id: 2,
-      name: "Alex Kalinski",
-      title: "Co-Founder of DELKA",
+      name: "Ines Khelifi",
+      title: "Traineeship Company Supervisor",
       img:
         "https://images.pexels.com/photos/428321/pexels-photo-428321.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      icon: "assets/youtube.png",
       desc:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem recusandae perspiciatis ducimus vel hic temporibus. ",
+        "Hard Worker and deciplined  person .",
       featured: true,
-    },
-    {
-      id: 3,
-      name: "Martin Harold",
-      title: "CEO of ALBI",
-      img:
-        "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      icon: "assets/linkedin.png",
-      desc:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
-    },
+    }
   ];
   return (
     <div className="testimonials" id="testimonials">
@@ -47,7 +35,6 @@ export default function Testimonials() {
                 src={d.img}
                 alt=""
               />
-              <img className="right" src={d.icon} alt="" />
             </div>
             <div className="center">
               {d.desc}
