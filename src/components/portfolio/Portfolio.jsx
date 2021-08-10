@@ -6,7 +6,6 @@ import {
   webPortfolio,
   mobilePortfolio,
   designPortfolio,
-  contentPortfolio,
 } from "../../data";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Modal } from 'react-bootstrap';
@@ -31,11 +30,7 @@ export default function Portfolio() {
     {
       id: "design",
       title: "Design",
-    },
-    {
-      id: "content",
-      title: "Content",
-    },
+    }
   ];
 
   useEffect(() => {
@@ -51,9 +46,6 @@ export default function Portfolio() {
         break;
       case "design":
         setData(designPortfolio);
-        break;
-      case "content":
-        setData(contentPortfolio);
         break;
       default:
         setData(featuredPortfolio);
